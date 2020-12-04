@@ -26,8 +26,6 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
 				<extensions>true</extensions>
-				<executions>
-					<execution>
 				<configuration>
 					<cloudHubDeployment>
 						<username>ravikanths</username>
@@ -41,6 +39,8 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 					</cloudHubDeployment>
 				</configuration>
+				<executions>
+					<execution>
 						<id>deploy</id>
 						<phase>deploy</phase>
 						<goals>
