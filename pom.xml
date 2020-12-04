@@ -28,6 +28,9 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
+					<skipDeploymentVerification>
+				true
+				</skipDeploymentVerification>
 						<username>ravikanths</username>
 						<password>Bbm@2010</password>
 						<environment>Developement</environment>
@@ -90,6 +93,10 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
+	<pluginRepository>
+	<id>mule-public</id>
+	<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+	</pluginRepository>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
 			<name>mulesoft release repository</name>
