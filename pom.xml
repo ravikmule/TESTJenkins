@@ -22,42 +22,47 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
-				<extensions>true</extensions>
-				<configuration>
-					<cloudHubDeployment>
-					<skipDeploymentVerification>
-				true
-				</skipDeploymentVerification>
-						<username>ravikanthsmule</username>
-						<password>Bbm@2010</password>
-						<environment>sandbox</environment>
-						<!-- <region>eu-cent</region> -->
-						<applicationName>test_jenkins</applicationName>
-						<muleVersion>${app.runtime}</muleVersion>
-						<workers>1</workers>
-						<workerType>Micro</workerType>
-						<uri>https://anypoint.mulesoft.com</uri>
-					</cloudHubDeployment>
-				</configuration>
-				<executions>
-					<execution>
-						<id>deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.4.2</version>
 				<extensions>true</extensions>
 				<configuration>
+					<runtimeFabricDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
+						<username>ravikants</username>
+						<password>Bbm@2010</password>
+						<applicationName>test_jenkins</applicationName>
+						<target>rtf</target>
+						<environment>Development</environment>
+						<provider>MC</provider>
+						<replicas>1</replicas>
+						<properties>
+							<key>value</key>
+						</properties>
+						<deploymentSettings>
+							<enforceDeployingReplicasAcrossNodes>false</enforceDeployingReplicasAcrossNodes>
+							<updateStrategy>recreate</updateStrategy>
+							<clustered>false</clustered>
+							<forwardSslSession>false</forwardSslSession>
+							<lastMileSecurity>false</lastMileSecurity>
+							<resources>
+								<cpu>
+									<reserved>20m</reserved>
+									<limit>1500m</limit>
+								</cpu>
+								<memory>
+									<reserved>700Mi</reserved>
+									<limit>800Mi</limit>
+								</memory>
+							</resources>
+							<http>
+								<inbound>
+									<publicUrl>url</publicUrl>
+								</inbound>
+							</http>
+						</deploymentSettings>
+					</runtimeFabricDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -93,10 +98,10 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-	<pluginRepository>
-	<id>mule-public</id>
-	<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-	</pluginRepository>
+		<pluginRepository>
+			<id>mule-public</id>
+			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		</pluginRepository>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
 			<name>mulesoft release repository</name>
