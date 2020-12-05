@@ -41,7 +41,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>${anypoint.uri}</uri>
-						<muleVersion>4.3</muleVersion>
+						<muleVersion>4.3.0</muleVersion>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${project.artifactId}</applicationName>
@@ -91,10 +91,6 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-		<pluginRepository>
-			<id>mule-public</id>
-			<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-		</pluginRepository>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
 			<name>mulesoft release repository</name>
