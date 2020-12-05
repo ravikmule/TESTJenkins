@@ -46,7 +46,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>${anypoint.uri}</uri>
-						<muleVersion>${mule.version}</muleVersion>
+						<muleVersion>4.3</muleVersion>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${project.artifactId}</applicationName>
