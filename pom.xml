@@ -31,9 +31,9 @@
 					<skipDeploymentVerification>
 				true
 				</skipDeploymentVerification>
-						<username>ravikanths</username>
+						<username>ravikanthsmule</username>
 						<password>Bbm@2010</password>
-						<environment>Developement</environment>
+						<environment>sandbox</environment>
 						<!-- <region>eu-cent</region> -->
 						<applicationName>test_jenkins</applicationName>
 						<muleVersion>${app.runtime}</muleVersion>
